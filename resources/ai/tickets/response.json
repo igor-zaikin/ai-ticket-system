@@ -1,0 +1,45 @@
+{
+    "name": "ticket_enrichment",
+    "strict": true,
+    "schema": {
+        "type": "object",
+        "properties": {
+            "version": {
+                "type": "string",
+                "enum": ["1.0"]
+            },
+            "type": {
+                "type": "string",
+                "enum": ["enrichment", "error"]
+            },
+            "category": {
+                "type": "string",
+                "enum": ["Technical", "Billing", "General", ""]
+            },
+            "sentiment": {
+                "type": "string",
+                "enum": ["Positive", "Neutral", "Negative", ""]
+            },
+            "urgency": {
+                "type": "string",
+                "enum": ["Low", "Medium", "High", ""]
+            },
+            "reply": {
+                "type": "string"
+            },
+            "issue": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "version",
+            "type",
+            "category",
+            "sentiment",
+            "urgency",
+            "reply",
+            "issue"
+        ],
+        "additionalProperties": false
+    }
+}
