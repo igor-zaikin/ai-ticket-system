@@ -43,21 +43,21 @@ docker compose exec app php artisan migrate
 docker compose exec app php artisan optimize:clear
 ```
 
-##Run Tests
+## Run Tests
 
 ```
 docker compose exec app php artisan test --filter=TicketApiTest
 ```
 
-##API Base URL
+## API Base URL
 
 ```
 http://localhost:8080
 ```
 
-##Endpoints
+## Endpoints
 
-###Create Ticket
+### Create Ticket
 
 ```
 POST /api/tickets
@@ -72,13 +72,13 @@ Example body:
 }
 ```
 
-###Get Ticket
+### Get Ticket
 
 ```
 GET /api/tickets/{id}
 ```
 
-##Prompt Strategy
+## Prompt Strategy
 
 The AI uses a strict system prompt that defines it as a helpful customer support agent and limits the output to a fixed task: classify the ticket, detect sentiment, assign urgency and draft a reply.
 
